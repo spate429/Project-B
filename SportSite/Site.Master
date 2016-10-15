@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SportSite.SiteMaster" %>
+
+<%--use to set layout of site using bootstrap--%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <link href="Content/Site.css" rel="stylesheet" /> <%--main css file--%>
+    <link href="Content/bootstrap.css" rel="stylesheet" /> <%--boot strap use to make it  responsive--%>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+   
+ <div id="logo" class="container-fluid"> <%--headr and logo--%>
+	<h1><a href="#" class="icon icon-spinner"><span>Sport Portal </span></a></h1>
+</div>
+
+        <div id="header" class="container-fluid"> <%--heade menu--%>
+	<div id="menu" class="container-fluid">
+		<ul><%-- menu links--%>
+			<li><a href="Default.aspx" accesskey="1" title="">Home</a></li>
+			<li><a href="#" accesskey="1" title="">Games</a></li>
+			<li><a href="#" accesskey="2" title="">Matches</a></li>
+			<li><a href="#" accesskey="3" title="">Teams</a></li>
+			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+            <div id="page-wrapper" class="container-fluid">
+	
+	<div id="page" class="container-fluid">
+		
+		<asp:ContentPlaceHolder ID="contentmain" runat="server" ></asp:ContentPlaceHolder>	
+		
+	
+	</div>
+</div>
+            <%--footer--%>
+<div id="copyright">
+	<p>@Copyright 2016</p>
+</div>
+
+    
+    </form>
+</body>
+</html>
